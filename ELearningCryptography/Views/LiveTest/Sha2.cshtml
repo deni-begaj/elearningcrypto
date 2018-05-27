@@ -1,0 +1,78 @@
+﻿
+
+
+
+<section id="contact" class="contact sections">
+    <div class="container">
+        <div class="row">
+            <div class="main_contact whitebackground">
+                <div class="head_title text-center">
+                    <h2>SHA-2</h2>
+                    <p>Plotësoni fushat e kërkuara dhe klikoni "Gjenero" për të përfituar HASH-in e vlerës tuaj</p>
+                </div>
+                <div class="contact_content">
+                    <div class="col-md-12">
+                        <div class="single_left_contact">
+                            <p>Madhësia e Celësit</p>
+                            <form id="formid">
+                                <div class="form-group">
+                                    <select class="form-control" id="keySize" placeholder="Madhësia e Celësit" required="">
+                                        <option value="256">256</option>
+                                        <option value="384">384</option>
+                                        <option value="512">512</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="single_left_contact">
+                            <p>Hasho</p>
+                            <form id="formid">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="value" placeholder="Vlera" required="">
+                                </div>
+
+                                <div class="center-content">
+                                    <input type="button" value="Hash" id="gobutton" class="btn btn-default">
+                                </div>
+
+                                <br />
+
+                                <div class="form-group">
+                                    <textarea rows="6" class="form-control" id="encrypted" placeholder="Hashi" required=""></textarea>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="head_title text-center">
+                    <p>* Mund të zgjidhni nga madhësia e celësit (256-384-512)</p>
+                    <p>* Ky Hash nuk ka funksion të kundërt (I Pakthyeshëm)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+
+    $("#gobutton").click(function () {
+        var val = $("#value").val();
+        var keySize = $("#keySize").val();
+
+
+        $.ajax({
+            type: "Get",
+            url: "Sha2Hash?value=" + val + "&keySize=" + keySize,
+            contentType: "application/json",
+            success: function (data) {
+                $("#encrypted").val(data);
+            }, error: function (err) {
+                console.log(err);
+            }
+        })
+    });
+
+</script>

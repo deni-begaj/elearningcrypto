@@ -1,0 +1,93 @@
+﻿
+
+<section id="contact" class="contact sections">
+    <div class="container">
+        <div class="row">
+            <div class="main_contact whitebackground">
+                <div class="head_title text-center">
+                    <h2>Md-5 </h2>
+                    <p>Plotësoni fushat e kërkuara dhe klikoni "Gjenero" për të përfituar vlerën e enkriptuar</p>
+                </div>
+                <div class="contact_content">
+                    <div class="col-md-6">
+                        <div class="single_left_contact">
+                            <p>Hasho</p>
+                            <form id="formid">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="value" placeholder="Vlera" required="">
+                                </div>
+
+                                <div class="center-content">
+                                    <input type="button" value="Hash" id="gobutton" class="btn btn-default">
+                                </div>
+
+                                <br />
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="encrypted" placeholder="Hashi" required="">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="single_right_contact">
+                            <p>Reverse Md-5 Hash (E vecantë)</p>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="encvalue" placeholder="Vlera E Hashuar në Md-5" required="">
+                                </div>
+
+                                <div class="center-content">
+                                    <input type="button" value="Kthe Vlerë" id="encgobutton" class="btn btn-default">
+                                </div>
+
+                                <br />
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="decrypted" placeholder="Vlera" required="">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+
+    $("#gobutton").click(function () {
+        var val = $("#value").val();
+
+        $.ajax({
+            type: "Get",
+            url: "Md5Hash?value=" + val ,
+            contentType: "application/json",
+            success: function (data) {
+                $("#encrypted").val(data);
+            }, error: function (err) {
+                console.log(err);
+            }
+        })
+    });
+
+    $("#encgobutton").click(function () {
+        var val = $("#encvalue").val();
+
+        $.ajax({
+            type: "Get",
+            url: "Md5Reverse?value=" + val,
+            contentType: "application/json",
+            success: function (data) {
+                $("#decrypted").val(data);
+                if (data == "") {
+                    $("#decrypted").attr("placeholder", "Nuk ka vlerë për këtë Hash në server.");
+                }
+            }, error: function (err) {
+                console.log(err);
+            }
+        })
+    });
+
+</script>

@@ -1,0 +1,122 @@
+﻿
+
+<style>
+    .code-block {
+        border-left: 4px solid green;
+        margin: 31px 0;
+        padding: 0 27px;
+        font-style: italic;
+        font-weight: bold;
+        line-height: 20px;
+    }
+
+    .text-block {
+        line-height: 35px;
+    }
+
+    .label-block {
+        color: #468847;
+        font-weight: bold;
+        font-style: italic;
+        border-bottom: 1px solid #468847;
+        text-align: start;
+    }
+</style>
+
+<section id="whatis" class="contact sections lightbg">
+    <div class="container">
+        <div class="row">
+            <div class="main_contact whitebackground">
+                <div class="head_title text-center">
+                    <h2>MD-5</h2>
+                </div>
+                <div class="contact_content">
+                    <div class="col-md-12">
+                        <div class="single_right_contact">
+
+                            <p class="label-block">Definition</p>
+
+                            <div class="text-block">
+                                Md-5 është algoritmi fillestar i hashimit i përdorur në mbarë botën. Ashtu si shumica e funksioneve të hash, MD5 nuk është as encryption as encoding. 
+                            </div>
+
+                            <br />
+                            <br />
+
+                            <p class="label-block">History</p>
+
+                            <div class="text-block">
+                                Ajo mund të plasaritet nga sulmet brute-force attack dhe vuan nga dobësi të mëdha .
+                                MD5 është projektuar nga Ronald Rivest në vitin 1991 për të zëvendësuar një funksion të mëparshëm hash MD4.
+                                Kodi source në RFC 1321 përmban një licensë "me atribut" RSA. Shkurtesa "MD" nënkupton "Message Digest".
+                                Siguria e MD5 është komprometuar rëndë, me dobësitë e saj që janë shfrytëzuar në terren, më së shumti me keq 
+                                nga malware i Flame në vitin 2012. Instituti i Inxhinierisë Software CMU konsideron MD5 në thelb "të thyer
+                                kriptografikisht dhe të papërshtatshme për përdorim të mëtejshëm".
+                                Përkundër kësaj dobësie të njohur, MD5 mbetet në përdorim.
+                            </div>
+                            <br />
+                            <br />
+
+                            <p class="label-block">Logic</p>
+
+                            <div class="text-block">
+                                MD5 përpunon një mesazh me gjatesi të ndryshueshme në një output me gjatësi fikse prej 128 bitësh. 
+                                Mesazhi i hyrjes është thyer në copa të blloqeve 512 bit (16 fjalë 32-bitësh); mesazhi është i mbushur
+                                në mënyrë që gjatësia e tij të jetë e ndashme nga 512. Mbushja funksionon si më poshtë: Së pari një 
+                                pjesë e vetme, 1, shtohet në fund të mesazhit. Kjo pasohet nga zero zeros që kërkohet për të sjellë 
+                                gjatësinë e mesazhit deri në 64 bit më pak se një shumëfish i 512. Pjesët e mbetura mbushen me 64 bit 
+                                që përfaqësojnë gjatësinë e mesazhit origjinal, modulo 264. Algoritmi kryesor i MD5 funksionon në një
+                                gjendje 128-bit, të ndarë në katër fjalë me 32 bit, të shënjuar me A, B, C dhe D. Këto inicializohen me 
+                                disa konstante fikse. Algoritmi kryesor pastaj përdor çdo bllok mesazhi 512-bit për të ndryshuar gjendjen. 
+                                Përpunimi i një blloku mesazhesh përbëhet nga katër faza të ngjashme, të quajtura raunde.
+
+                            </div>
+
+                            <br />
+
+                            <p class="label-block">Security Issues</p>
+
+                            <div class="text-block">
+                                Në vitin 1993, Den Boer dhe Bosselaers dhanë një rezultat të hershëm, megjithëse të kufizuar, për të gjetur një "pseudo-përplasje" 
+                                të funksionit të compression MD5; domethënë dy vektorë të ndryshëm të inicializimit që prodhojnë një tretë të njëjtë.
+                                <br /><br />
+                                Në 1996, Dobbertin njoftoi një përplasje të funksionit të compression të MD5 (Dobbertin, 1996). Ndërsa ky nuk ishte një sulm mbi funksionin e plotë të hash-it MD5, ai ishte mjaft i afërt për kriptografët që të rekomandonin kalimin në një algoritëm tjetër, si SHA-1 ose RIPEMD-160.
+                                <br /><br />
+                                Madhësia e vlerës së hash (128 bit) është mjaft e vogël për të menduar një Birthday Attack. MD5CRK ishte një projekt i shpërndarë nisur në mars të vitit 2004 me qëllim të demonstrimit se MD5 është praktikisht i pasigurt duke gjetur një përplasje duke përdorur Birthday Attack.
+                            </div>
+
+
+                            <br />
+                            <br />
+
+                            <p class="label-block">Latest</p>
+
+                            <p class="code-block">
+                                Ka disa vite tanimë që algoritmi i Md-5 e ka humbur gjithë fuqinë e tij, me anë të Brutte Force Attack duke i zbuluar të gjitha hashet për cdo fjalë te mundshme. <br /><br />
+                            </p>
+
+
+                            <br />
+                            <br />
+
+                            <p class="label-block">Usage</p>
+
+                            <div class="text-block">
+                                Kryesisht Md-5 përdorej në të shkuarën për të hashuar password, të dhëna personale dhe sensitive që ruheshin 
+                                në databaza, por kjo detyrë nuk u plotësua për shumë gjatë për arsye dobësimi të algoritmit.
+                                <br />
+                            </div>
+
+
+                            <br />
+
+                            <input type="button" value="Provo Live" id="gobutton" class="btn btn-default" onclick="window.location.href = '@Url.Action("Md5","LiveTest")'">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

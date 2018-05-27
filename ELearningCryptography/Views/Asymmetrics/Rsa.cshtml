@@ -1,0 +1,112 @@
+﻿<style>
+    .code-block {
+        border-left: 4px solid green;
+        margin: 31px 0;
+        padding: 0 27px;
+        font-style: italic;
+        font-weight: bold;
+        line-height: 30px;
+    }
+
+    .text-block {
+        line-height: 35px;
+    }
+
+    .label-block {
+        color: #468847;
+        font-weight: bold;
+        font-style: italic;
+        border-bottom: 1px solid #468847;
+        text-align: start;
+    }
+</style>
+
+<section id="whatis" class="contact sections lightbg">
+    <div class="container">
+        <div class="row">
+            <div class="main_contact whitebackground">
+                <div class="head_title text-center">
+                    <h2>RSA</h2>
+                </div>
+                <div class="contact_content">
+                    <div class="col-md-12">
+                        <div class="single_right_contact">
+
+                            <p class="label-block">Definition</p>
+
+                            <div class="text-block">
+                                Në kriptografi, akronimi RSA tregon një algoritëm kriptografik asimetrik, të shpikur në vitin 1977 nga Ronald Rivest,
+                                Adi Shamir dhe Leonard Adleman, i cili mund të përdoret për të enkriptuar ose për të nënshkruar informacione. RSA është
+                                algoritmi asimetrik më i përdorur sot ku faktorë kryesorë në suksesin e këtij algoritmi janë Teorema e Eulerit dhe faktori Pi.
+                            </div>
+
+                            <br />
+                            <br />
+
+                            <p class="label-block">History</p>
+
+                            <div class="text-block">
+                                Rsa është shpikur në vitin 1977 nga Ronald Rivest, Adi Shamir dhe Leonard Adleman. Patenta u përket po këtyre personave.
+                            </div>
+                            <br />
+                            <br />
+
+                            <p class="label-block">Logic</p>
+
+                            <div class="text-block">
+                                Në mënyrë të rastësishme gjenerojmë çiftin e çelësave publik dhe privat. Është e rëndësishme, që gjenerimi i këtyre 
+                                çelësave të jetë sa më i rastësishëm dhe i paparashikueshëm. Pastaj bëhet enkriptimi i të dhënave me çelësin publik 
+                                duke shfrytëzuar algoritmin RSA. Dekriptimi i tyre bëhet përmes çelësit privat.
+                            </div>
+
+                            <br />
+
+                            <div class="text-block">
+                                Shembull praktik se si funksionon RSA: 
+                            </div>
+
+                            <br />
+
+                            <p class="code-block">
+                                Nëse Ana dëshiron të dërgojë një mesazh te Bob dhe nuk dëshiron që dikush tjetër përveç Bob ta lexojë atë, ajo do të 
+                                kërkojë çelësin publik të Bob në listë dhe me atë do ta kodojë mesazhin. 
+                                <br />
+                                Duke qenë se Bob është i vetmi që ka çelësin privat, ai do të jetë i vetmi që mund ta dekriptojë mesazhin.  
+                                <br/>
+                                Ky mesazh do të mbetet sekret për të gjithë të tjerët, përfshirë dhe Anën, e cila nuk e ka çelësin privat dhe 
+                                nuk do të jetë në gjendje të deshifrojë mesazhin e krijuar  prej saj. 
+                                <br />
+                                Suksesi i këtij sistemi bazohet në domosdoshmërinë absolute që Bob të jetë i vetmi që ka çelësin privat.
+                                <br />
+                                Në të kundërt, duke pasur të dy çelësat, cdokush mund ta deshifrojë lehtësisht mesazhin.
+                            </p>
+
+                            <br />
+                            <br />
+
+                            <p class="label-block">Usage</p>
+
+                            <div class="text-block">
+                                RSA aplikohet në shumë institucione, ku pwrfshihen degë të qeverisë amerikane, korporata të mëdha, laboratore kombëtare dhe universitete:
+                            </div>
+
+                            <p class="code-block">
+                                - Përdoret për enkriptimin dhe dekriptimin e mesazheve.<br />
+                                - E bën komunikimin të sigurtë.<br />
+                                - Përdoret për Digital Signature.<br />
+                                - Përdoret për shpërndarjen e celësave.<br />
+                                - Përdoret në E-Commerce.
+                            </p>
+
+                            <br />
+
+                            <input type="button" value="Provo Live" id="gobutton" class="btn btn-default" onclick="window.location.href = '@Url.Action("Rsa","LiveTest")'">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,108 @@
+﻿
+
+<style>
+    .code-block {
+        border-left: 4px solid green;
+        margin: 31px 0;
+        padding: 0 27px;
+        font-style: italic;
+        font-weight: bold;
+        line-height: 20px;
+    }
+
+    .text-block {
+        line-height: 35px;
+    }
+
+    .label-block {
+        color: #468847;
+        font-weight: bold;
+        font-style: italic;
+        border-bottom: 1px solid #468847;
+        text-align: start;
+    }
+</style>
+
+<section id="whatis" class="contact sections lightbg">
+    <div class="container">
+        <div class="row">
+            <div class="main_contact whitebackground">
+                <div class="head_title text-center">
+                    <h2>DES</h2>
+                </div>
+                <div class="contact_content">
+                    <div class="col-md-12">
+                        <div class="single_right_contact">
+
+                            <p class="label-block">Definition</p>
+
+                            <div class="text-block">
+                                Standardi i Kriptimit të të Dhënave (DES) është një metodë e vjetruar simetrike e kodimit të të dhënave.
+                                DES punon duke përdorur të njëjtin çelës për të enkriptuar dhe dekriptuar një mesazh, kështu që dërguesi dhe marrësi duhet të përdorin të njëjtin çelës privat.
+                            </div>
+
+                            <br />
+                            <br />
+
+                            <p class="label-block">History</p>
+
+                            <div class="text-block">
+                                DES (Data Encryption Data) është  një ndër algoritmat më të përdorur përdorur të enkriptimit në botë. Për shumë vite, dhe prej shumë individë, “shkruajtja e kodeve sekretë” dhe DES janë sinonime të njëra tjetrës. Pavarsisht përpjekjeve nga fondacioni Electronic Frointer, me krijimin e një makinerie prej $220.000 për të thyer mesazhet e koduara me DES, DES besohet se do të vazhdojë të jetojë në qeveri, dhe banka për shumë kohë, madje dhe duke u zgjeruar ne triple-DES.
+                            </div>
+                            <br />
+                            <br />
+
+                            <p class="label-block">Logic</p>
+
+                            <div class="text-block">
+                                DES punon duke enkriptuar grupe mesazhe nga 64 bit.
+                                Psh, nëse marrim mesazhin e thjeshtë "8787878787878787" dhe e enkriptojmë me celësin DES "0E329232EA6D0D73", 
+                                përfundojmë me tekst kod "0000000000000000”. Në qoftë se ky tekst kod dekriptohet me të njëjtin celës DES 
+                                “0E329232EA6D0D73", rezultati është mesazhi fillestar. Pak a shume kjo është menyra sesi funksionon DES.
+
+                            </div>
+
+                            <div class="text-block">
+                                DES punon në bit, ose me numërat binarë me 0 dhe 1 që njihen nga kompjuterat. 
+                            </div>
+
+                            <p class="code-block">
+                                0001  =  1
+                                <br /><br />
+                                0010  =  2
+                                <br /><br />
+                                1000  =  8
+                            </p>
+
+                            <br />
+                            <br />
+
+                            <p class="label-block">New</p>
+
+                            <div class="text-block">
+                                Së fundmi , është zhvilluar versioni i ri i DES, i quajtur 3DES i cili praktikisht përsërit algoritmin DES 3 herë.
+                            </div>
+
+                            <br />
+                            <br />
+
+                            <p class="label-block">Usage</p>
+
+                            <div class="text-block">
+                                Kryesisht DES është përdorur për të enkriptuar të dhëna të qeverive dhe entiteteve me të dhëna të konfidencialitetit të lartë.
+                                <br />
+                            </div>
+
+
+                            <br />
+
+                            <input type="button" value="Provo Live" id="gobutton" class="btn btn-default" onclick="window.location.href = '@Url.Action("Des","LiveTest")'">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

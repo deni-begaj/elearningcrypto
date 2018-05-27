@@ -1,0 +1,135 @@
+﻿
+<style>
+    .code-block {
+        border-left: 4px solid green;
+        margin: 31px 0;
+        padding: 0 27px;
+        font-style: italic;
+        font-weight: bold;
+        line-height: 20px;
+    }
+
+    .text-block {
+        line-height: 35px;
+    }
+
+    .label-block {
+        color: #468847;
+        font-weight: bold;
+        font-style: italic;
+        border-bottom: 1px solid #468847;
+        text-align: start;
+    }
+</style>
+
+<section id="whatis" class="contact sections lightbg">
+    <div class="container">
+        <div class="row">
+            <div class="main_contact whitebackground">
+                <div class="head_title text-center">
+                    <h2>AES</h2>
+                </div>
+                <div class="contact_content">
+                    <div class="col-md-12">
+                        <div class="single_right_contact">
+
+                            <p class="label-block">Definition</p>
+
+                            <div class="text-block">
+                                AES (Advanced Encryption Standard) është një tekst i koduar, simetrik që është zgjedhur e përdoret 
+                                më së tepërmi nga qeveria Amerikane për të mbrojtur informacionin e klasifikuar dhe është implementuar 
+                                në software dhe hardware në mbarë botën për të ruajtur të dhëna delikate.
+                            </div>
+
+                            <br />
+                            <br />
+
+                            <p class="label-block">History</p>
+
+                            <div class="text-block">
+                                Një zëvendësim për DES ishte i nevojshëm pasi madhësia e tij ishte e pamjaftueshme. 
+                                Me rritjen e fuqisë procesuese, DES konsiderohej i pambrojtur kundër sulmeve brute-force attacks. 
+                                Triple DES ishte projektuar për të kapërcyer këtë pengesë por rezultoi i ngadaltë.
+                                AES filloi të zhvillohej ne vitin 1997 kur u njoftua nevoja për një algoritëm pasues. Qëllimi I 
+                                zhvillimit të AES ishte të mbronte informacionet delikate shtetërorë, të ishte i lehtë, dhe të 
+                                implementohej lehtë në software dhe hardware, si dhe në mjedise të kufizuara (smart card) duke 
+                                ofruar mbrojtje efektive ndaj teknikave të ndryshme të sulmeve.
+                            </div>
+                            <br />
+                            <br />
+
+                            <p class="label-block">Logic</p>
+
+                            <div class="text-block">
+                                AES operon me 128 bit tekst të thjeshtë për të prodhuar 128 bit tekst të koduar. Njësoj si dhe algoritmat 
+                                e tjerë të enkriptimit modern, AES kërkon përdorimin e celësave gjatë enkriptimit dhe dekriptimit. 
+                            </div>
+
+                            <br />
+
+                            <div class="text-block">
+                                AES mbështet 3 celësa me gjatësi të ndryshme :
+                            </div>
+
+                            <br />
+
+                            <p class="code-block">
+                                128 Bit  -  I shpejtë
+                                <br /><br />
+                                192 Bit  -  Normal
+                                <br /><br />
+                                256 Bit  -  I ngadaltë
+                            </p>
+
+                            <br />
+
+                            <div class="text-block">
+                                Sa më i gjatë celësi aq më i fortë enkriptimi. Nga ana tjetër, sa më i shkurtër celësi aq më i shpejtë
+                                enkriptimi dhe dekriptimi. Pra cëlësi më i fortë është ai 256 bit, por më i shpejti 128 bit.
+                                <br/>
+                                AES është një shifrues iterativ sesa Feistel. Bazohet në 'rrjetin zëvendësim-ndryshim'. Ai përbëhet 
+                                nga një sërë operacionesh të lidhura, disa prej të cilave përfshijnë zëvendësimin e inputeve me output 
+                                specifike (zëvendësimet) dhe të tjerat përfshijnë copëzimin e biteve përreth (permutacionet).
+                                Interesante sesi AES kryen të gjitha llogaritë e tij në bytes dhe jo në bit. Për këtë arsye, 
+                                AES trajton 128 bitet e një blloku të zakonshëm si 16 byte. Këto 16 bytes janë të rregulluar në 
+                                katër kolona dhe katër rreshta për përpunim si një matricë -Ndryshe nga DES, numri i raundeve në 
+                                AES është i ndryshueshëm dhe varet nga gjatësia e çelësit. AES përdor 10 raunde për çelësat 128-bit, 
+                                12 raunde për çelësat 192 bit dhe 14 raunde për çelësat 256-bit. Secili prej këtyre raundeve përdor 
+                                një çelës të ndryshëm 128-bitësh, i cili llogaritet nga çelësi origjinal AES.
+                            </div>
+
+                            
+
+
+                            <br />
+                            <br />
+
+                            <p class="label-block">New</p>
+
+                            <div class="text-block">
+                                Mendohet të jetë të paktën gjashtë herë më i shpejtë se 3DES (TripleDES).
+                            </div>
+
+                            <br />
+                            <br />
+
+                            <p class="label-block">Usage</p>
+
+                            <div class="text-block">
+                                Gjithashtu AES është përdorur për të enkriptuar të dhëna të qeverive dhe entiteteve databaza të konfidencialitetit të lartë.
+                                <br />
+                            </div>
+
+
+                            <br />
+
+                            <input type="button" value="Provo Live" id="gobutton" class="btn btn-default" onclick="window.location.href = '@Url.Action("Aes","LiveTest")'">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

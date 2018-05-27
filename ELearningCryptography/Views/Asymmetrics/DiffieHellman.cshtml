@@ -1,0 +1,101 @@
+﻿
+<style>
+    .code-block {
+        border-left: 4px solid green;
+        margin: 31px 0;
+        padding: 0 27px;
+        font-style: italic;
+        font-weight: bold;
+        line-height: 20px;
+    }
+
+    .text-block {
+        line-height: 35px;
+    }
+
+    .label-block {
+        color: #468847;
+        font-weight: bold;
+        font-style: italic;
+        border-bottom: 1px solid #468847;
+        text-align: start;
+    }
+</style>
+
+<section id="whatis" class="contact sections lightbg">
+    <div class="container">
+        <div class="row">
+            <div class="main_contact whitebackground">
+                <div class="head_title text-center">
+                    <h2>Diffie-Hellman</h2>
+                </div>
+                <div class="contact_content">
+                    <div class="col-md-12">
+                        <div class="single_right_contact">
+
+                            <p class="label-block">Definition</p>
+
+                            <div class="text-block">
+                                Algoritmi Diffie-Hellman është një mënyrë për të gjeneruar një sekret të përbashkët midis dy njerëzve 
+                                në një mënyrë të tillë që sekreti nuk mund të shihet duke vëzhguar komunikimin.
+                            </div>
+
+                            <br />
+                            <br />
+
+                            <p class="label-block">History</p>
+                                
+                            <div class="text-block">
+                                Historia e kriptografisë mund të ndahet në dy epoka: epoka klasike dhe epoka moderne. Pika e kthesës në mes
+                                të dyve ndodhi në vitin 1977, kur u prezantuan edhe algoritmi RSA dhe algoritmi i shkëmbimit të celësave Diffie-Hellman.
+                                Këto algoritme të reja ishin revolucionare, sepse ato përfaqësonin skemat e para kriptografike ku siguria bazohej në
+                                teorinë e numrave; ato ishin e para që mundësonin komunikim të sigurt midis dy palëve pa një sekret të përbashkët.
+                                Kriptografia shkoi nga të qenit në lidhje me sigurimin e transportimit të kodeve të fshehta anembanë botës për të qenë
+                                në gjendje të siguronte sigurinë e komunikimit midis dy palëve pa u trembur për dikë që po përgjonte për shkëmbimin e celësave.
+
+                            </div>
+
+                            <br />
+                            <br />
+
+                            <p class="label-block">Logic</p>
+
+                            <div class="text-block">
+                                Kjo metodë lejon dy pajisje të komunikojnë nëpërmjet një rrjeti, duke krijuar një sekret të përbashkët pa
+                                shkëmbyer asnjë të dhënë sekrete. Të dy pajisjet kanë nevojë vetëm për të shkëmbyer çelësin e tyre publik.
+                                Pastaj, duke përdorur çelësin publik të kolegëve të tjerë dhe çelësin e tij privat, secila pajisje kryen
+                                operacionin e veçantë gjenerues të algoritmit për të marrë sekretin e përbashkët
+                                çelësat përkatës privatë) dhe të arrijnë në një vlerë të përbashkët të njohur të dyve,
+                                por jo të ditur për këdo që e vëzhgon komunikimin.
+                            </div>
+
+                            <br />
+
+                            <p class="label-block">Usage</p>
+
+                            <div class="text-block">
+                                Ky algoritem ka disa përdorime në fushën e kriptografisë : 
+                                <br />
+                            </div>
+
+                            <p class="code-block">
+                                Public Key Encryption Schema <br /><br />
+                                Forward Secrery <br /><br />
+                                Shkëmbim celësash me autentifikim<br /><br />
+                                Infrastruktura Public Key
+
+                            </p>
+
+
+                            <br />
+
+                            <input type="button" value="Provo Live" id="gobutton" class="btn btn-default" onclick="window.location.href = '@Url.Action("DiffieHellman","LiveTest")'">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

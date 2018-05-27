@@ -1,0 +1,57 @@
+﻿
+
+
+<section id="contact" class="contact sections">
+    <div class="container">
+        <div class="row">
+            <div class="main_contact whitebackground">
+                <div class="head_title text-center">
+                    <h2>Diffie Hellman </h2>
+                    <p>Plotësoni fushat e kërkuara dhe klikoni "Gjenero" për të përfituar vlerën e enkriptuar</p>
+                </div>
+                <div class="contact_content">
+                    <div class="col-md-12">
+                        <div class="single_left_contact">
+                            <p>Hasho</p>
+                            <form id="formid">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="value" placeholder="Vlera" required="">
+                                </div>
+
+                                <div class="center-content">
+                                    <input type="button" value="Enkripto" id="gobutton" class="btn btn-default">
+                                </div>
+
+                                <br />
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="encrypted" placeholder="Hashi" required="">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+
+    $("#gobutton").click(function () {
+        var val = $("#value").val();
+
+        $.ajax({
+            type: "Get",
+            url: "DiffieHellmanEncrypt?value=" + val ,
+            contentType: "application/json",
+            success: function (data) {
+                $("#encrypted").val(data[0]);
+            }, error: function (err) {
+                console.log(err);
+            }
+        })
+    });
+
+</script>
+

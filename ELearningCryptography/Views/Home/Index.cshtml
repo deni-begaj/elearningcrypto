@@ -1,0 +1,252 @@
+﻿@{
+    ViewBag.Title = "Learn Crypto";
+}
+
+@section scripts {
+    <script defer="defer">
+        $("div#more_text").hide();
+        $('div#read_more').click(function () {
+
+            $("div#more_text").slideToggle();
+
+            var txt = $(this).html();
+            if (txt == "Lexo Më Shumë") {
+                $(this).html("Lexo Më Pak");
+            } else {
+                $(this).html("Lexo Më Shumë");
+            }
+           
+        });
+    </script>
+}
+
+
+<style>
+
+    #whatis {
+        padding-bottom: 0;
+    }
+
+
+    .code-block {
+        border-left: 4px solid green;
+        margin: 31px 0;
+        padding: 0 27px;
+        font-style: italic;
+        font-weight: bold;
+        line-height: 20px;
+    }
+
+    .text-block {
+        line-height: 35px;
+    }
+
+    #read_more {
+        color: darkgreen;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        float: right;
+    }
+
+    #read_more:hover {
+        color: forestgreen;
+        cursor: pointer;
+    }
+
+    #read_more:active {
+        color: dodgerblue;
+        cursor: pointer;
+    }
+
+
+</style>
+
+<!--Home page style-->
+<header id="home" class="home">
+    <div class="overlay-fluid-block">
+        <div class="container text-center">
+            <div class="row">
+                <div class="home-wrapper">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="home-content">
+                            <h1>Algoritmet Kriptografike</h1>
+                            <p> Mësoni algoritmet kriptografike në një mënyrë efikase dhe të shpejtë, shoqëruar me shpjegim, 
+                            demonstrime dhe shembuj nga përdorimi aktual i këtyre algoritmave në sistemet e sotme informatike. </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="whatis" class="contact sections lightbg">
+    <div class="container">
+        <div class="row">
+            <div class="main_contact whitebackground">
+                <div class="head_title text-center">
+                    <h2>Cfarë është Kriptografia në Computer Science ?</h2>
+                    <p>Kur njerëzit flasin për kriptografinë, është e lehtë të thuash se ky diskutim nuk i përmbahet njohurive të tua, 
+                       por logjika bazë në lojë është në të vërtetë shumë e thjeshtë!</p>
+                </div>
+                <div class="contact_content">
+                    <div class="col-md-12">
+                        <div class="single_right_contact">
+
+                            <p class="text-block">
+                                Ekziston një lloj magjie e quajtur matematikë, ku mund të gjeneroni dy numra (celësa) të ndryshëm së bashku. 
+                                Për cfarë e kam fjalën ?
+                                <br /><br />Këta celësa duken të rastësishëm, por në fakt janë të lidhur në një mënyrë të mrekullueshme.
+                                <br /><br />Kur kodojmë informacion në një mënyrë të veçantë, çdo gjë që është koduar me një celës dekodohet me celësin tjetër.
+                                Meqenëse këta numra i kodojnë dhe dekodojnë vlerat, ne i quajmë këto numra CELËSA.
+                            </p>
+
+                            <div id="read_more">Lexo Më Shumë</div>
+                            
+                            <br />
+
+                            <div id="more_text">
+
+                                <br />
+
+                                <p class="code-block">
+                                    text => (first key) => fa8e8432fabc => (second key) => text
+                                    <br /><br />
+                                    text <= (first key) <= a82b820fba2 <= (second key) <= text
+                                </p>
+
+                                <br />
+
+                                <p class="text-block">
+                                    Nëqoftëse A dhe B secili kanë njërin nga çelësat, atëherë komunikimi i tyre zhvillohet brenda një kanali
+                                    kriptografik dhe mesazhet interpretohen vetëm nga A dhe B.
+
+                                    <br /><br />Gjithashtu, nëse vetëm A ka çelësin, nuk mund ta dekriptojë atë që ai koduar me këtë celës.
+                                </p>
+
+                                <br />
+
+                                <p class="code-block">
+                                    text => (first key) => fa8e8432fabc => (first key) => 28aa01843f7813
+                                </p>
+
+                                <br />
+
+                                <p class="text-block">
+                                    Mënyra më normale për të përdorur këtë çift çelësash është të mbash një prej tyre publik <i>(public key)</i>,
+                                    dhe (më e rëndësishmja) ta mbash tjetrin privat <i>(private key)</i>,. Tani cdokush në internet mund të dërgojë
+                                    mesazhe të kriptuara me ty me çelësin tuaj publik dhe e anasjellta, nëse dikush ju jep çelësin e tyre publik, ju
+                                    mund të dërgoni mesazhe tek ata !
+
+                                    <br /><br />
+                                    Kjo njihet si <i>"Public Key Cryptography"</i>.
+                                    <br /><br />
+
+                                    Gjithashtu mund të kodoni mesazhe duke përdorur çelësin tuaj privat. Çdokush që ka çelësin tuaj publik mund ta
+                                    dekodojë këtë mesazh. Kështu, meqë mesazhi mund të lexohet vetëm duke e dekoduar me çelësin tuaj publik, provohet
+                                    matematikisht se JU keni shkruar këtë mesazh.
+
+                                    <br /><br />
+
+                                    Kodimi i një mesazhi me çelësin tuaj privat njihet si nënshkrimi i tij <i>(signing)</i>. Duke vërtetuar se çelësi
+                                    publik i dikujt dekodon një mesazh X , ju verifikoni se ai person e ka <i>nënëshkruar</i>-ur atë, dhe ju mund ti
+                                    besoni se këtij dërguesi.
+
+                                    <br />
+
+                                    Nëse doni ti bëni gjërat më interesante, ju mund të nënshkruani një mesazh me çelësin tuaj privat, dhe më pas ta
+                                    kodoni atë me çelësin tim publik ! Në këtë mënyrë e di se vetëm unë mund ta lexoj atë qe ti ke nisur, dhe kur ta lexoj,
+                                    do ta di me siguri se vetëm ti mund ta kishe dërguar.
+
+                                    <br /><br />
+
+                                    Cdo pjesë e komunikimit modern në internet përfshin kriptografinë. Që nga certifikatat SSL TLS në browsera, protokolli
+                                    HTTPS, komunikimi me E2E <i>(End-To-End Encryption)</i>, enkriptimi i databazave në mënyrë që askush
+                                    përvec pronarit të të dhënave të ketë akses në to.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="Category" class="price sections">
+
+    <div class="head_title text-center">
+        <h1>Kategorizimi</h1>
+        <p>Algoritmat kriptografikë mund të ndahet në tre grupe kryesore</p>
+    </div>
+    <!-- Example row of columns -->
+    <div class="cd-pricing-container cd-has-margins">
+
+        <ul class="cd-pricing-list cd-bounce-invert">
+            <li>
+                <ul class="cd-pricing-wrapper">
+                    <li data-type="monthly" class="is-visible">
+                        <header class="cd-pricing-header">
+                            <h2>Simetrikë</h2>
+                        </header> <!-- .cd-pricing-header -->
+                        <div class="cd-pricing-body">
+                            <ul class="cd-pricing-features">
+                                <li><em><i class="fa fa-check-circle"></i></em>Shpejtësi e Lartë</li>
+                                <li><em><i class="fa fa-remove"></i></em>Mungesa e Digital Signature</li>
+                                <li><em><i class="fa fa-remove"></i></em>Rrjedhja e informacionit përbën rrezik</li>
+                                <li><em><i class="fa fa-check-circle"></i></em>Autentikim me password për verifikim identiteti.</li>
+                            </ul>
+                        </div> <!-- .cd-pricing-body -->
+                        <footer class="cd-pricing-footer">
+                            <a class="cd-select" href="@Url.Action("Index","Symmetrics")">Lexo Më Shumë</a>
+                        </footer>  <!-- .cd-pricing-footer -->
+                    </li> 
+                </ul> <!-- .cd-pricing-wrapper -->
+            </li>
+            <li class="cd-popular">
+                <ul class="cd-pricing-wrapper">
+                    <li data-type="monthly" class="is-visible">
+                        <header class="cd-pricing-header">
+                            <h2>Asimetrikë</h2>
+                        </header> <!-- .cd-pricing-header -->
+                        <div class="cd-pricing-body">
+                            <ul class="cd-pricing-features">
+                                <li><em><i class="fa fa-check-circle"></i></em>Siguri E Lartë</li>
+                                <li><em><i class="fa fa-remove"></i></em>Performon ngadalë</li>
+                                <li><em><i class="fa fa-check-circle"></i></em>Nuk ka shpërndarje celësash</li>
+                                <li><em><i class="fa fa-remove"></i></em>Përmban Digital Signature</li>
+                            </ul>
+                        </div> <!-- .cd-pricing-body -->
+                        <footer class="cd-pricing-footer">
+                            <a class="cd-select" href="@Url.Action("Index","Asymmetrics")">Lexo Më Shumë</a>
+                        </footer>  <!-- .cd-pricing-footer -->
+                    </li>
+                </ul> <!-- .cd-pricing-wrapper -->
+            </li>
+            <li>
+                <ul class="cd-pricing-wrapper">
+                    <li data-type="monthly" class="is-visible">
+                        <header class="cd-pricing-header">
+                            <h2>Funksionet Hash</h2>
+                        </header> <!-- .cd-pricing-header -->
+                        <div class="cd-pricing-body">
+                            <ul class="cd-pricing-features">
+                                <li><em><i class="fa fa-check-circle"></i></em>I Shpejtë</li>
+                                <li><em><i class="fa fa-remove"></i></em>Humbje Informacioni</li>
+                                <li><em><i class="fa fa-check-circle"></i></em>Përmirësime Të Shpeshta</li>
+                                <li><em><i class="fa fa-check-circle"></i></em>I Pakthyeshëm</li>
+                            </ul>
+                        </div> <!-- .cd-pricing-body -->
+                        <footer class="cd-pricing-footer">
+                            <a class="cd-select" href="@Url.Action("Index","HashFunctions")">Lexo Më Shumë</a>
+                        </footer>  <!-- .cd-pricing-footer -->
+                    </li>
+                </ul> <!-- .cd-pricing-wrapper -->
+            </li>
+        </ul> <!-- .cd-pricing-list -->
+    </div> <!-- .cd-pricing-container -->
+</section>
+

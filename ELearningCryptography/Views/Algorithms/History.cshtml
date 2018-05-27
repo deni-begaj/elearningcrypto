@@ -1,0 +1,97 @@
+﻿<section id="algorithm_1" class="features sections" style="padding-top: 0;">
+    <div class="container">
+        <div class="row">
+            <div class="main_features_content2">
+                <div class="col-sm-6">
+                    <div class="single_features_left text-center">
+                        <img src="@Url.Content("~/Content/assets/images/sym_encryption.png")" alt="" style="height: 200px; margin-top: 200px;"/>
+                    </div>
+                </div>
+                <div class="col-sm-6 margin-top-60">
+                    @*TODO*@
+                    <div class="single_features_right ">
+                        <h2>Funksionet HASH</h2>
+                        <p>Një funksion hash është çdo funksion që mund të përdoret për të konvertuar të dhënat e gjatësive të ndryshme në të dhëna me gjatësi fikse. 
+                        Hashet formojnë strukturën e të dhënave të quajtur tabela hash, e përdorur gjerësisht në software për kërkim të shpejtë 
+                        të të dhënave. Funksionet Hash përshpejtojnë kërkimin në databaza duke zbuluar të dhëna të dyfishta mes shumë të dhënash.
+                        Hashet janë kryesisht të dobishme në kriptografi. Një funksion hash kriptografik lejon verifikimin e të dhënave duke i konvertuar 
+                        në vlera të caktuara hash dhe duke i krahasuar me hashin përgjegjës në databazë. Kjo mënyrë është përdorur për të siguruar integritetin
+                        e të dhënave të transmetuara. </p>
+                        <ul>
+                            <li>Funksionet HASH nuk kanë funksion të kundërt (hash to value).</li>
+                            <li>Hashet përdoren për të dhëna sensitive (passworde, llogari bankare, pine).</li>
+                            <li>Funksioni Hash MD5 është bërë i mundur të thyhet më anë të bruteforce nga super-kompjuterat.</li>
+                        </ul>
+                        <div class="features_buttom">
+                            <a href="@Url.Action("Index","HashFunctions")" class="btn btn-default">Mëso Më Shumë</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="algorithm_2" class="features sections">
+    <div class="container">
+        <div class="row">
+            <div class="main_features_content2">
+
+                <div class="col-sm-6 margin-top-60">
+                    <div class="single_features_right ">
+                        <h2>Enkriptimi Simetrik</h2>
+                        <p>Algoritmet simetrike enkriptojnë dhe dekriptojnë një mesazh duke përdorur të njëjtin celës, atë publik. Nëse mbani të njëjtin
+                        çelës, mund të shkëmbeni 
+                        të dhëna me këdo tjetër që e posedon këtë çelës. Është një sekret i përbashkët. Por kujdes se kujt i jepni çelësin. Sapo 
+                        të bie në duar të gabuara, nuk ka kthim prapa. Ai person mund të lexojë të gjitha mesazhet tuaja, dhe të krijojë mesazhe 
+                        të reja që nuk mund të dallohen nga të dhënat e tua reale.</p>
+                        <ul>
+                            <li>Shpejtësi e Lartë</li>
+                            <li>>Mungesa e Digital Signature</li>
+                            <li>Autentikim me password për verifikim identiteti.</li>
+                        </ul>
+                        <div class="features_buttom">
+                            <a href="@Url.Action("Index","Symmetrics")" class="btn btn-default">Mëso Më Shumë</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="single_features_left text-center">
+                        <img src="@Url.Content("~/Content/assets/images/sym_picture.png")" alt=""  style="height: 200px; margin-top: 200px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--End of Features 2 Section -->
+
+<section id="algorithm_3" class="features sections">
+    <div class="container">
+        <div class="row">
+            <div class="main_features_content2">
+                <div class="col-sm-6">
+                    <div class="single_features_left text-center">
+                        <img src="@Url.Content("~/Content/assets/images/key.png")" alt="" style="height: 200px; margin-top: 200px;" />
+                    </div>
+                </div>
+                <div class="col-sm-6 margin-top-60">
+                    <div class="single_features_right ">
+                        <h2>Enkriptimi Asimetrik</h2>
+                        <p>Algoritmet asimetrike përdorin dy çelësa të ndërvarur, një për të koduar të dhënat, 
+                           dhe tjetra për ta dekriptuar. Kjo ndërvarësi siguron një numër karakteristikash të ndryshme, 
+                           më të rëndësishmet ndoshta janë nënshkrimet dixhitale të cilat përdoren midis të tjerave për të 
+                           garantuar që një mesazh është krijuar nga një entitet i veçantë ose autentifikon sisteme ose përdorues të largët.</p>
+                        <ul>
+                            <li>Siguri E Lartë</li>
+                            <li>Performon ngadalë</li>
+                            <li>Përmban Digital Signature</li>
+                        </ul>
+                        <div class="features_buttom">
+                            <a href="@Url.Action("Index","Asymmetrics")" class="btn btn-default">Mëso Më Shumë</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
